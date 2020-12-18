@@ -8,7 +8,10 @@ import Axios from 'axios';
 
 class Blog extends Component {
     componentDidMount () {
-        Axios.get('https://jsonplaceholder.typicode.com/posts');
+        Axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => {
+                console.log(response)
+            });
     }
     render () {
         return (
